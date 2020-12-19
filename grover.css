@@ -8,8 +8,7 @@
   
   .site-header {
     margin-top: -48px;
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.16), rgb(0 0 0 / 16%));
-    background: linear-gradient(rgb(0 0 0 / 16%), rgb(0 0 0 / 16%));
+    background: #000000c4;
     backdrop-filter: saturate(180%) blur(20px);
   }
   .site-header a {
