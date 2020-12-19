@@ -1,0 +1,59 @@
+.container {
+    max-width: 960px;
+  }
+  
+  /*
+   * Custom translucent site header
+   */
+  
+  .site-header {
+    margin-top: -48px;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.16), rgb(0 0 0 / 16%));
+    background: linear-gradient(rgb(0 0 0 / 16%), rgb(0 0 0 / 16%));
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+  .site-header a {
+    color: #999;
+    transition: ease-in-out color .15s;
+    text-decoration: none;
+  }
+  .site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  .site-main-logo {
+    width: 200;
+    height: 200;
+    border-radius: 8px;
+  }
+  .site-bg-hero {
+    background: url(hero.png);
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.16), rgb(0 0 0 / 16%)), url(hero.png);
+    background: linear-gradient(rgb(0 0 0 / 16%), rgb(0 0 0 / 16%)), url(hero.png);
+  }
+  
+  
+  /*
+   * Extra utilities
+   */
+  
+  .border-top { border-top: 1px solid #e5e5e5; }
+  .border-bottom { border-bottom: 1px solid #e5e5e5; }
+  
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+  
+  .flex-equal > * {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
+  @media (min-width: 768px) {
+    .flex-md-equal > * {
+      -ms-flex: 1;
+      -webkit-box-flex: 1;
+      flex: 1;
+    }
+  }
+  
+  .overflow-hidden { overflow: hidden; }
+  
