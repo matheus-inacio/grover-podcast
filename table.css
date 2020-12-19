@@ -1,0 +1,215 @@
+.table-scroll {
+    overflow-x: auto
+}
+
+.table-icon-check {
+    color: #167dff;
+}
+
+.wt-table {
+    text-align: left
+}
+
+.jb-text-nowrap {
+    white-space: nowrap;
+}
+
+.wt-table>.wt-table__tr>.wt-table__td:last-child,.wt-table>tr>td:last-child {
+    padding-right: 0
+}
+
+.wt-table_wide {
+    width: 100%
+}
+
+.wt-table_size_m .wt-table__td,.wt-table_size_m>tbody td,.wt-table_size_m>thead td,.wt-table_size_m>thead th {
+    padding-right: 32px
+}
+
+.wt-table_size_m .wt-table__tr-head>.wt-table__td,.wt-table_size_m>thead td,.wt-table_size_m>thead th {
+    padding-top: 12px;
+    padding-bottom: 12px
+}
+
+.wt-table_size_m .wt-table__tr-body>.wt-table__td,.wt-table_size_m>tbody td {
+    padding-top: 11px;
+    padding-bottom: 12px;
+    border-top-width: 1px;
+    border-top-style: solid
+}
+
+.wt-table_size_m .wt-table__tr-body,.wt-table_size_m>tbody {
+    letter-spacing: normal;
+    color: rgba(39,40,44,.7);
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px
+}
+
+.wt-table_size_s .wt-table__td,.wt-table_size_s>tbody td,.wt-table_size_s>thead td,.wt-table_size_s>thead th {
+    padding-right: 16px
+}
+
+.wt-table_size_s>.wt-table__tr-body,.wt-table_size_s>tbody {
+    letter-spacing: normal;
+    color: rgba(39,40,44,.7);
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px
+}
+
+.wt-table_size_s>.wt-table__tr-head>.wt-table__td,.wt-table_size_s>thead td,.wt-table_size_s>thead th {
+    padding-bottom: 6px;
+    padding-top: 6px
+}
+
+.wt-table_size_s>.wt-table__tr-body>.wt-table__td,.wt-table_size_s>tbody td {
+    padding-top: 5px;
+    padding-bottom: 6px;
+    border-top-style: solid;
+    border-top-width: 1px
+}
+
+.wt-table_size_xs .wt-table__td,.wt-table_size_xs>tbody td,.wt-table_size_xs>thead td,.wt-table_size_xs>thead th {
+    padding-right: 12px
+}
+
+.wt-table_size_xs>.wt-table__tr-body>.wt-table__td,.wt-table_size_xs>.wt-table__tr-head>.wt-table__td,.wt-table_size_xs>tbody td,.wt-table_size_xs>thead td,.wt-table_size_xs>thead th {
+    padding-bottom: 4px;
+    padding-top: 4px
+}
+
+.wt-table_size_xs>.wt-table__tr-head>.wt-table__td,.wt-table_size_xs>thead td,.wt-table_size_xs>thead th {
+    color: rgba(39,40,44,.7);
+    font-weight: 400;
+    font-weight: 700;
+    color: #27282c
+}
+
+.wt-table_size_xs>.wt-table__tr-body,.wt-table_size_xs>.wt-table__tr-head>.wt-table__td,.wt-table_size_xs>tbody,.wt-table_size_xs>thead td,.wt-table_size_xs>thead th {
+    letter-spacing: normal;
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 16px
+}
+
+.wt-table_size_xs>.wt-table__tr-body,.wt-table_size_xs>tbody {
+    color: rgba(39,40,44,.7);
+    font-weight: 400
+}
+
+.wt-table_size_xs>.wt-table__tr-body:first-child>.wt-table__td,.wt-table_size_xs>.wt-table__tr-head+.wt-table__tr-body>.wt-table__td,.wt-table_size_xs>tbody tr:first-child>td {
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding-top: 3px
+}
+
+.wt-table_theme_light>.wt-table__tr-head,.wt-table_theme_light>thead {
+    letter-spacing: normal;
+    color: rgba(39,40,44,.7);
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    font-weight: 700;
+    color: #27282c
+}
+
+.wt-table_theme_light>.wt-table__tr-body>.wt-table__td,.wt-table_theme_light>tbody td {
+    border-top-color: rgba(39,40,44,.2)
+}
+
+.wt-table_theme_dark>.wt-table__tr-head>.wt-table__td,.wt-table_theme_dark>thead td,.wt-table_theme_dark>thead th {
+    color: hsla(0,0%,100%,.6);
+    font-weight: 700;
+    color: #fff
+}
+
+.wt-table_theme_dark>.wt-table__tr-body>.wt-table__td,.wt-table_theme_dark>tbody td {
+    border-top-color: hsla(0,0%,100%,.2)
+}
+
+.wt-table_theme_dark>.wt-table__tr-body,.wt-table_theme_dark>tbody {
+    color: hsla(0,0%,100%,.6)
+}
+
+.wt-table_theme_dark.wt-table_size_xs>.wt-table__tr-head,.wt-table_theme_dark.wt-table_size_xs>thead {
+    letter-spacing: normal;
+    color: rgba(39,40,44,.7);
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    font-weight: 700;
+    color: #fff
+}
+
+.wt-table_theme_dark.wt-table_size_xs>.wt-table__tr-body,.wt-table_theme_dark.wt-table_size_xs>tbody {
+    color: hsla(0,0%,100%,.6)
+}
+
+.wt-table__tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap
+}
+
+.wt-table_theme_light>.wt-table__tr-head,.wt-table_theme_light>thead {
+    letter-spacing: normal;
+    color: rgba(39,40,44,.7);
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    font-weight: 700;
+    color: #27282c
+}
+
+.wt-table_theme_light>.wt-table__tr-body>.wt-table__td,.wt-table_theme_light>tbody td {
+    border-top-color: rgba(39,40,44,.2)
+}
+
+.wt-icon {
+    fill: currentcolor
+}
+
+.wt-icon_size_xs {
+    width: 16px;
+    height: 16px
+}
+
+.wt-icon_size_m,.wt-icon_size_s {
+    width: 24px;
+    height: 24px
+}
+
+.wt-icon_size_l {
+    width: 28px;
+    height: 28px
+}
+
+.wt-icon_theme_light {
+    fill: #27282c
+}
+
+.wt-icon_theme_dark {
+    fill: #fff
+}
+
+@-webkit-keyframes wt-icon-rotate {
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes wt-icon-rotate {
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}

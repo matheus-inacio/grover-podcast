@@ -1,10 +1,20 @@
 <html>
-<header>
+<head>
+    <title>Grover Podcast</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2c93da">
+    <meta name="theme-color" content="#ffffff">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="grover.css" rel="stylesheet">
     <link href="chart.css" rel="stylesheet">
-</header>
+    <link href="table.css" rel="stylesheet">
+    <link href="review-cards.css" rel="stylesheet">
+</head>
 
 <body>
     <nav class="site-header sticky-top py-1">
@@ -12,18 +22,16 @@
             <a class="py-2" href="#">
                 <img src="logo_small.png" alt="Grover Podcast" width="24" height="24">
             </a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Home</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Performance</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Review</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Memory usage</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Download</a>
         </div>
     </nav>
 
     <div class="position-relative overflow-hidden p-md-5 text-center site-bg-hero text-white">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <div class="col-md-5 p-lg-1 mx-auto my-5">
             <img src="logo_with_bg.png" class="site-main-logo" alt="Grover Podcast" width="200" height="200">
             <h1 class="display-4 font-weight-normal">Grover Podcast</h1>
             <p class="lead font-weight-normal">The ultimate app to manage your favorite podcasts on Windows.</p>
@@ -32,8 +40,8 @@
     </div>
 
     <div class="position-relative overflow-hidden p-md-5 text-center bg-light">
-        <div class="col-xl-5 p-lg-1 mx-auto my-2">
-            <h1 class="display-4 font-weight-normal">Native means faster</h1>
+        <div class="col-xl-6 p-lg-1 mx-auto my-2">
+            <h1 class="display-4 font-weight-normal">Native equals faster</h1>
             <p class="lead font-weight-normal">Because it is compile to native code, Grover Podcast is able to provide a
                 faster experience.</p>
             <div class="skills my-5">
@@ -91,16 +99,45 @@
         </div>
     </div>
 
+    
     <div class="position-relative overflow-hidden p-md-5 text-center bg-white">
-        <div class="col-xl-5 p-lg-1 mx-auto my-2">
-            <h1 class="display-4 font-weight-normal">Native means lightway</h1>
-            <p class="lead font-weight-normal">Without hogging all the resources of the device, Grover allows you to have smoother
+        <div class="col-xl-6 p-lg-1 mx-auto my-2">
+            <div class="reviews-cards-wrapper">
+                <article id="review-card-1" class="review-card">
+                  <h3 class="review-card-title h50">
+                    The best podcast app on Windows 10
+                  </h3>
+                  <p class="review-card-body p10">
+                    “Grover Pro is still the best podcast app for Windows 10. 
+                    If you like podcasts and you like great apps, go buy this one.”
+                  </p>
+                  <img alt="Windows Central" class="review-card-logo-wc" src="wc-logo-color.svg">
+                </article>
+                <article id="review-card-2" class="review-card">
+                  <h3 class="review-card-title h50">
+                    Manage podcasts in a quick, hassle-free manner
+                  </h3>
+                  <p class="review-card-body p10">
+                    “Grover Podcast can be easily installed on your system, comes with a user-friendly
+                    interface and packs intuitive functions, proving itself to be accessible and efficient alike.”
+                  </p>
+                  <img class="review-card-logo-softpedia" alt="Softpedia" src="softpedia_logo.svg">
+                </article>
+              </div>
+        </div>
+    </div>
+
+    <div class="position-relative overflow-hidden p-md-5 text-center bg-light">
+        <div class="col-xl-6 p-lg-1 mx-auto my-2">
+            <h1 class="display-4 font-weight-normal">Native equals lightway</h1>
+            <p class="lead font-weight-normal">Without hogging all the resources of the device, Grover allows you to
+                have smoother
                 experience while multitasking.</p>
             <div class="skills my-5">
                 <ul class="lines">
                     <li class="line l--0">
                         <span class="line__label">
-                            Mb (RAM)
+                            MB (RAM)
                         </span>
                     </li>
                     <li class="line l--25">
@@ -151,60 +188,293 @@
         </div>
     </div>
 
-    <footer class="container py-5">
+    <div class="position-relative overflow-hidden p-md-5 bg-white">
+        <div class="col-xl-6 p-lg-1 mx-auto my-2">
+            <h2 class="display-6 font-weight-normal">Choose Your Edition</h2>
+            <div class="table-scroll">
+                <table class="wt-table wt-table_theme_light wt-table_size_m wt-table_wide" id="chooseYourEdition">
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td>Grover Pro</td>
+                            <td>Grover Podcast</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Automatically download new episodes</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
+                                </svg></td>
+                            <td><svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
+                                </svg></td>
+                        </tr>
+                        <tr>
+                            <td>Look for new episode at startup</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Notify when new episodes are found</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Automatically add new episode to the playlist</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Configurable skip intervals</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Automatically delete new episodes</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Light and Dark mode</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Import/export OPML files</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg></td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Change the default download folder</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Periodically look for new episodes on background</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
+                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Limit the amount of downloaded episodes to keep per podcast.</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
+                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Sync your subscriptions between devices through OneDrive</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
+                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Capable of running on Xbox</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
+                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Set the 'Automatic download' setting for specific podcasts.</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
+                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Set the 'Automatic add to playlist' setting for specific podcasts.</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
+                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Enable 'Notifications' setting for specific podcasts.</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
+                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Change bluetooth control to skip forwards/backwards</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
+                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+
+                        
+                        <tr>
+                            <td>Prevent download over metered connections</td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
+                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                </svg>
+                            </td>
+                            <td>
+                                <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
+                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                </svg>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot class="table-footer">
+                        <tr>
+                            <td class="table-footer-cell">
+                            </td>
+                            <td>
+                                <a href='https://www.microsoft.com/store/apps/9nblggh5kjks?cid=storebadge&ocid=badge'>
+                                    <img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='Grover Pro' style='width: 142px; height: 52px;'/>
+                                </a>                                
+                            </td>
+                            <td>
+                                <a href='https://www.microsoft.com/store/apps/9nblggh6c4bc?cid=storebadge&ocid=badge'>
+                                    <img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='Grover Podcast' style='width: 142px; height: 52px;'/>
+                                </a>   
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container py-1">
         <div class="row">
-            <div class="col-12 col-md">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="d-block mb-2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
-                    <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
-                    <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
-                    <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
-                    <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
-                    <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
-                </svg>
-                <small class="d-block mb-3 text-muted">© 2017-2018</small>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Features</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Cool stuff</a></li>
-                    <li><a class="text-muted" href="#">Random feature</a></li>
-                    <li><a class="text-muted" href="#">Team feature</a></li>
-                    <li><a class="text-muted" href="#">Stuff for developers</a></li>
-                    <li><a class="text-muted" href="#">Another one</a></li>
-                    <li><a class="text-muted" href="#">Last time</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Resource</a></li>
-                    <li><a class="text-muted" href="#">Resource name</a></li>
-                    <li><a class="text-muted" href="#">Another resource</a></li>
-                    <li><a class="text-muted" href="#">Final resource</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Business</a></li>
-                    <li><a class="text-muted" href="#">Education</a></li>
-                    <li><a class="text-muted" href="#">Government</a></li>
-                    <li><a class="text-muted" href="#">Gaming</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>About</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Team</a></li>
-                    <li><a class="text-muted" href="#">Locations</a></li>
-                    <li><a class="text-muted" href="#">Privacy</a></li>
-                    <li><a class="text-muted" href="#">Terms</a></li>
-                </ul>
-            </div>
+            <div class="col-12">
+                <img src="logo_small.png" alt="Grover Podcast" width="24" height="24">
+                <small class="d-block mb-3 text-muted">© 2016-2021</small>
+            </div>            
         </div>
     </footer>
 
