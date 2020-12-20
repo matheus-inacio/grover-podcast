@@ -3,7 +3,7 @@
 }
 
 .table-icon-check {
-    color: #167dff;
+    color: #3c8c99;
 }
 
 .wt-table {
@@ -23,7 +23,7 @@
 }
 
 .wt-table_size_m .wt-table__td,.wt-table_size_m>tbody td,.wt-table_size_m>thead td,.wt-table_size_m>thead th {
-    padding-right: 32px
+    /*padding-right: 32px*/
 }
 
 .wt-table_size_m .wt-table__tr-head>.wt-table__td,.wt-table_size_m>thead td,.wt-table_size_m>thead th {
@@ -212,4 +212,12 @@
         -webkit-transform: rotate(1turn);
         transform: rotate(1turn)
     }
+}
+
+.wt-table th, td {
+ text-align: center;
+}
+
+th:first-child, td:first-child {
+    text-align: left;
 }
