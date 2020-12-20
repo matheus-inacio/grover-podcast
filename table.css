@@ -221,3 +221,7 @@
 th:first-child, td:first-child {
     text-align: left;
 }
+
+.wt-table .table-footer-cell {
+    height: 58px;
+}

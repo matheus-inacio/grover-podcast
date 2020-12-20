@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <title>Grover Podcast</title>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -18,31 +19,35 @@
 </head>
 
 <body>
-    <nav class="site-header sticky-top py-1">
+    <nav class="navbar navbar-dark fixed-top bg-dark p-1">
         <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <a class="py-2" href="#">
-                <img src="logo_small.png" alt="Grover Podcast" width="24" height="24">
+            <a class="navbar-brand" href="javascript:void(0)">
+                <img src="logo_small.png" alt="Grover Podcast" width="30" height="30">
+                <span class="ml-2 mt-1">Grover Podcast</span>
             </a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Home</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Performance</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Review</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Memory usage</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Download</a>
+            <a class="btn btn-grover ml-auto rounded-pill d-none d-md-block" href="javascript:void(0)" onclick="GetApp()">Get it now</a>
         </div>
     </nav>
 
-    <div class="position-relative overflow-hidden p-md-5 text-center site-bg-hero text-white">
-        <div class="col-md-5 p-lg-1 mx-auto my-5">
-            <img src="logo_with_bg.png" class="site-main-logo" alt="Grover Podcast" width="200" height="200">
-            <h1 class="display-4 font-weight-normal">Grover Podcast</h1>
-            <p class="lead font-weight-normal">The ultimate app to manage your favorite podcasts on Windows.</p>
-            <a class="btn btn-outline-secondary" href="#">Get it now</a>
+    <div class="position-relative overflow-hidden p-md-5 site-bg-hero text-white">
+        <div class="col-md-8 p-lg-1 mx-auto">
+            <div class="row mx-4">
+                <div class="col-xl-5 my-5">                    
+                    <div class="px-5 d-inline d-sm-none"></div>
+                    <h1 class="display-4 font-weight-normal">Grover Podcast</h1>
+                    <p class="lead font-weight-normal">The ultimate app to manage your favorite podcasts on Windows.</p>
+                    <a class="btn btn-grover btn-lg rounded-pill" href="javascript:void(0)" onclick="GetApp()">Get it now</a>
+                </div>
+                <div class="col-xl-7">
+                    <img src="layers.png" class="ml-auto d-none d-xl-block"/>
+                </div>
+            </div>
         </div>
     </div>
 
-    
+
     <div class="position-relative overflow-hidden p-md-5 text-center bg-white">
-        <div class="col-xl-6 p-lg-1 mx-auto my-5">            
+        <div class="col-xl-6 p-lg-1 mx-auto my-5">
             <h1 class="display-4 font-weight-normal">Store Ratings</h1>
             <p class="lead font-weight-normal">
                 With more than 1,900 ratings, Grover is the best rated podcast app.
@@ -123,31 +128,31 @@
         </div>
     </div>
 
-    
+
     <div class="position-relative overflow-hidden p-md-5 text-center bg-white">
         <div class="col-xl-6 p-lg-1 mx-auto my-4">
             <div class="reviews-cards-wrapper">
                 <article id="review-card-1" class="review-card">
-                  <h3 class="review-card-title h50">
-                    The best podcast app on Windows 10
-                  </h3>
-                  <p class="review-card-body p10">
-                    “Grover Pro is still the best podcast app for Windows 10. 
-                    If you like podcasts and you like great apps, go buy this one.”
-                  </p>
-                  <img alt="Windows Central" class="review-card-logo-wc" src="wc-logo-color.svg">
+                    <h3 class="review-card-title h50">
+                        The best podcast app on Windows 10
+                    </h3>
+                    <p class="review-card-body p10">
+                        “Grover Pro is still the best podcast app for Windows 10.
+                        If you like podcasts and you like great apps, go buy this one.”
+                    </p>
+                    <img alt="Windows Central" class="review-card-logo-wc" src="wc-logo-color.svg">
                 </article>
                 <article id="review-card-2" class="review-card">
-                  <h3 class="review-card-title h50">
-                    Manage podcasts in a quick, hassle-free manner
-                  </h3>
-                  <p class="review-card-body p10">
-                    “Grover Podcast can be easily installed on your system, comes with a user-friendly
-                    interface and packs intuitive functions, proving itself to be accessible and efficient alike.”
-                  </p>
-                  <img class="review-card-logo-softpedia" alt="Softpedia" src="softpedia_logo.svg">
+                    <h3 class="review-card-title h50">
+                        Manage podcasts in a quick, hassle-free manner
+                    </h3>
+                    <p class="review-card-body p10">
+                        “Grover Podcast can be easily installed on your system, comes with a user-friendly
+                        interface and packs intuitive functions, proving itself to be accessible and efficient alike.”
+                    </p>
+                    <img class="review-card-logo-softpedia" alt="Softpedia" src="softpedia_logo.svg">
                 </article>
-              </div>
+            </div>
         </div>
     </div>
 
@@ -155,7 +160,8 @@
         <div class="col-xl-6 p-lg-1 mx-auto my-2">
             <h1 class="display-4 font-weight-normal">Native equals lightweight</h1>
             <p class="lead font-weight-normal">
-                Without hogging all the resources of the device, Grover allows you to have smoother multitasking experience.
+                Without hogging all the resources of the device, Grover allows you to have smoother multitasking
+                experience.
             </p>
             <div class="skills my-5">
                 <ul class="lines">
@@ -212,7 +218,7 @@
         </div>
     </div>
 
-    <div class="position-relative overflow-hidden p-md-5 bg-white">
+    <div id="compare-table" class="position-relative overflow-hidden p-md-5 bg-white">
         <div class="col-xl-6 p-lg-1 mx-auto my-2">
             <h2 class="display-6 font-weight-normal">Choose Your Edition</h2>
             <div class="table-scroll">
@@ -232,7 +238,8 @@
                                     <path
                                         d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
                                     </path>
-                                </svg></td>
+                                </svg>
+                            </td>
                             <td><svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
                                     <path
                                         d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
@@ -243,12 +250,16 @@
                             <td>Look for new episode at startup</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
@@ -256,12 +267,16 @@
                             <td>Notify when new episodes are found</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
@@ -269,12 +284,16 @@
                             <td>Automatically add new episode to the playlist</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
@@ -282,12 +301,16 @@
                             <td>Configurable skip intervals</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
@@ -295,12 +318,16 @@
                             <td>Automatically delete new episodes</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
@@ -308,12 +335,16 @@
                             <td>Light and Dark mode</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
@@ -321,11 +352,16 @@
                             <td>Import/export OPML files</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
-                                </svg></td>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
+                                </svg>
+                            </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
@@ -333,13 +369,16 @@
                             <td>Change the default download folder</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
                                     </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
@@ -348,26 +387,34 @@
                             <td>Periodically look for new episodes on background</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
-                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                    <path
+                                        d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
-                        
+
                         <tr>
                             <td>Limit the amount of downloaded episodes to keep per podcast.</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
-                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                    <path
+                                        d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
@@ -376,12 +423,16 @@
                             <td>Sync your subscriptions between devices through OneDrive</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
-                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                    <path
+                                        d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
@@ -390,40 +441,52 @@
                             <td>Capable of running on Xbox</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
-                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                    <path
+                                        d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
-                        
+
                         <tr>
                             <td>Set the 'Automatic download' feature for specific podcasts.</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
-                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                    <path
+                                        d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
-                        
+
                         <tr>
                             <td>Set the 'Automatic add to playlist' feature for specific podcasts.</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
-                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                    <path
+                                        d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
@@ -432,12 +495,16 @@
                             <td>Enable the 'Notifications' feature for specific podcasts.</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
-                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                    <path
+                                        d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
@@ -446,27 +513,35 @@
                             <td>Change bluetooth control to skip forwards/backwards</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
-                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                    <path
+                                        d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
 
-                        
+
                         <tr>
                             <td>Prevent download over metered connections</td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m table-icon-check">
-                                    <path d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z"></path>
+                                    <path
+                                        d="M8.416 20.414l-6.123-6.123 1.414-1.414 4.709 4.709L21.209 4.793l1.414 1.414L8.416 20.414z">
+                                    </path>
                                 </svg>
                             </td>
                             <td>
                                 <svg viewBox="0 0 24 24" class="wt-icon wt-icon_size_m">
-                                    <path d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+                                    <path
+                                        d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z">
+                                    </path>
                                 </svg>
                             </td>
                         </tr>
@@ -477,14 +552,14 @@
                             <td class="table-footer-cell">
                             </td>
                             <td>
-                                <a href='https://www.microsoft.com/store/apps/9nblggh5kjks?cid=storebadge&ocid=badge'>
-                                    <img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='Grover Pro' style='width: 100px; height: 36px;'/>
-                                </a>                                
+                                <a class="btn btn-grover ml-auto rounded-pill" href='https://www.microsoft.com/store/apps/9nblggh5kjks?cid=storebadge&ocid=badge'>
+                                    Download
+                                </a>
                             </td>
                             <td>
-                                <a href='https://www.microsoft.com/store/apps/9nblggh6c4bc?cid=storebadge&ocid=badge'>
-                                    <img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='Grover Podcast' style='width: 100px; height: 36px;'/>
-                                </a>   
+                                <a class="btn btn-grover ml-auto rounded-pill" href='https://www.microsoft.com/store/apps/9nblggh6c4bc?cid=storebadge&ocid=badge'>
+                                    Download
+                                </a>
                             </td>
                         </tr>
                     </tfoot>
@@ -493,12 +568,13 @@
         </div>
     </div>
 
-    <footer class="container py-1">
+    <footer class="container py-5">
         <div class="row">
             <div class="col-12">
-                <img src="logo_small.png" alt="Grover Podcast" width="24" height="24">
-                <small class="d-block mb-3 text-muted">© 2016-2021</small>
-            </div>            
+                <img src="logo_small.png" class="mx-2" alt="Grover Podcast" width="24" height="24">
+                <small class="d-inline text-muted">Matheus Inácio ©</small>
+                <small id="year" class="d-inline text-muted"></small>
+            </div>
         </div>
     </footer>
 
@@ -506,6 +582,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function GetApp() {
+            let element = document.getElementById("compare-table");
+            element.scrollIntoView();
+        }
+    </script>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
