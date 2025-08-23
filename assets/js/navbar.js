@@ -4,6 +4,19 @@ Main Navbar
 
 "use strict";
 
+function throttle(func, limit) {
+  let inThrottle;
+  return function() {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  }
+}
+
 function initNavbar() {
   //Navbar fade
   if ($(".navbar-wrapper.navbar-fade.navbar-light").length) {
@@ -11,20 +24,26 @@ function initNavbar() {
       '<div class="navbar-placeholder"></div>'
     );
     $(".navbar-placeholder").height(
-      jQuery(".navbar-wrapper.navbar-fade").outerHeight()
+      $(".navbar-wrapper.navbar-fade").outerHeight()
     );
-    $(window).on("scroll", function () {
-      var height = $(window).scrollTop();
-      if (height > 65) {
-        $(".navbar-wrapper.navbar-fade.is-transparent")
-          .removeClass("is-transparent navbar-light")
-          .addClass("navbar-faded");
-      } else {
-        $(".navbar-wrapper")
-          .removeClass("navbar-faded")
-          .addClass("is-transparent navbar-light");
-      }
-    });
+    
+    const handleScroll = () => {
+      requestAnimationFrame(() => {
+        var height = $(window).scrollTop();
+        if (height > 65) {
+          $(".navbar-wrapper.navbar-fade.is-transparent")
+            .removeClass("is-transparent navbar-light")
+            .addClass("navbar-faded");
+        } else {
+          $(".navbar-wrapper")
+            .removeClass("navbar-faded")
+            .addClass("is-transparent navbar-light");
+        }
+      });
+    };
+    
+    $(window).on("scroll", throttle(handleScroll, 16)); // 60fps throttling
+    $(window).trigger("scroll");
   }
 
   //Navbar fade
@@ -33,53 +52,70 @@ function initNavbar() {
       '<div class="navbar-placeholder"></div>'
     );
     $(".navbar-placeholder").height(
-      jQuery(".navbar-wrapper.navbar-fade").outerHeight()
+      $(".navbar-wrapper.navbar-fade").outerHeight()
     );
-    $(window).on("scroll", function () {
-      var height = $(window).scrollTop();
-      if (height > 65) {
-        $(".navbar-wrapper.navbar-fade.is-transparent")
-          .removeClass("is-transparent")
-          .addClass("navbar-faded");
-      } else {
-        $(".navbar-wrapper")
-          .removeClass("navbar-faded")
-          .addClass("is-transparent");
-      }
-    });
+    
+    const handleScroll = () => {
+      requestAnimationFrame(() => {
+        var height = $(window).scrollTop();
+        if (height > 65) {
+          $(".navbar-wrapper.navbar-fade.is-transparent")
+            .removeClass("is-transparent")
+            .addClass("navbar-faded");
+        } else {
+          $(".navbar-wrapper")
+            .removeClass("navbar-faded")
+            .addClass("is-transparent");
+        }
+      });
+    };
+    
+    $(window).on("scroll", throttle(handleScroll, 16));
   }
 
   //Navbar Clone
   if ($(".is-cloned").length) {
-    $(window).scroll(function () {
-      var height = $(window).scrollTop();
-      if (height > 50) {
-        $(".is-cloned").addClass("is-active");
-      } else {
-        $(".is-cloned").removeClass("is-active");
-      }
-    });
+    const handleCloneScroll = () => {
+      requestAnimationFrame(() => {
+        var height = $(window).scrollTop();
+        if (height > 50) {
+          $(".is-cloned").addClass("is-active");
+        } else {
+          $(".is-cloned").removeClass("is-active");
+        }
+      });
+    };
+    
+    $(window).scroll(throttle(handleCloneScroll, 16));
   }
 
   //Toggle between light and dark logo when solid navbar comes in
-  $(window).on("scroll", function () {
-    var height = $(window).scrollTop();
-    if (height > 80) {
-      // $("img.light-logo").attr("src", "assets/img/logos/bulkit-logo.png");
-    } else {
-      //$("img.light-logo").attr("src", "assets/img/logos/bulkit-w.png");
-    }
-  });
-
-  if ($(".navbar-light").length) {
-    $(window).on("scroll", function () {
+  const handleLogoScroll = () => {
+    requestAnimationFrame(() => {
       var height = $(window).scrollTop();
       if (height > 80) {
-        $(".button-signup").removeClass("light-btn").addClass("primary-btn");
+        // $("img.light-logo").attr("src", "assets/img/logos/bulkit-logo.png");
       } else {
-        $(".button-signup").removeClass("primary-btn").addClass("light-btn");
+        //$("img.light-logo").attr("src", "assets/img/logos/bulkit-w.png");
       }
     });
+  };
+  
+  $(window).on("scroll", throttle(handleLogoScroll, 16));
+
+  if ($(".navbar-light").length) {
+    const handleButtonScroll = () => {
+      requestAnimationFrame(() => {
+        var height = $(window).scrollTop();
+        if (height > 80) {
+          $(".button-signup").removeClass("light-btn").addClass("primary-btn");
+        } else {
+          $(".button-signup").removeClass("primary-btn").addClass("light-btn");
+        }
+      });
+    };
+    
+    $(window).on("scroll", throttle(handleButtonScroll, 16));
   }
 }
 
@@ -112,18 +148,22 @@ Alternate Navbar
 ========================================================================== */
 
 function initLandingNavbar() {
-  $(window).on("scroll", function () {
-    var height = $(window).scrollTop();
-    if (height > 65) {
-      $(".navbar-landing").removeClass("is-faded");
-      $(".navbar-landing").removeClass("is-mobile");
-    } else {
-      $(".navbar-landing").addClass("is-faded");
-      if ($(".navbar-landing .navbar-menu").hasClass("is-active")) {
-        $(".navbar-landing").addClass("is-mobile");
+  const handleLandingScroll = () => {
+    requestAnimationFrame(() => {
+      var height = $(window).scrollTop();
+      if (height > 65) {
+        $(".navbar-landing").removeClass("is-faded");
+        $(".navbar-landing").removeClass("is-mobile");
+      } else {
+        $(".navbar-landing").addClass("is-faded");
+        if ($(".navbar-landing .navbar-menu").hasClass("is-active")) {
+          $(".navbar-landing").addClass("is-mobile");
+        }
       }
-    }
-  });
+    });
+  };
+  
+  $(window).on("scroll", throttle(handleLandingScroll, 16));
 }
 
 function initLandingMobileMenu() {
