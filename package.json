@@ -1,0 +1,40 @@
+{
+  "name": "grover-podcast",
+  "version": "1.0.0",
+  "description": "Grover Podcast - The ultimate app to manage your favorite podcasts on Windows",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm run clean && npm run minify-css && npm run minify-js && npm run copy-assets && npm run create-dist-html",
+    "build:prod": "npm run build && npm run optimize-images",
+    "clean": "rimraf dist",
+    "minify-css": "mkdir -p dist/assets/css && cleancss -o dist/assets/css/style.min.css assets/css/style.css && cleancss -o dist/assets/css/stars-review.min.css assets/css/stars-review.css && cleancss -o dist/assets/css/chart.min.css assets/css/chart.css && cleancss -o dist/assets/css/table.min.css assets/css/table.css",
+    "minify-js": "mkdir -p dist/assets/js && uglifyjs assets/js/main.js -o dist/assets/js/main.min.js && uglifyjs assets/js/navbar.js -o dist/assets/js/navbar.min.js && cp assets/js/jquery.min.js dist/assets/js/",
+    "copy-assets": "cp -r assets/img dist/assets/ && cp robots.txt dist/ && cp sitemap.xml dist/",
+    "create-dist-html": "node scripts/build-html.js",
+    "optimize-images": "node scripts/optimize-images.js",
+    "serve": "http-server dist -p 8080 -o",
+    "dev": "http-server . -p 3000 -o"
+  },
+  "keywords": [
+    "podcast",
+    "windows",
+    "app",
+    "grover",
+    "audio",
+    "media"
+  ],
+  "author": "Matheus Inácio",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "rimraf": "^5.0.5",
+    "uglify-js": "^3.17.4",
+
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matheus-inacio/grover-podcast.git"
+  },
+  "homepage": "https://groverpodcasts.com"
+}
