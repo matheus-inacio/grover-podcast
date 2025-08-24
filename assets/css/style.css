@@ -13224,6 +13224,7 @@ a.has-text-danger-dark:hover,a.has-text-danger-dark:focus{
     width:100%
 }
 .navbar-wrapper>.container{
+    display: flex;
     min-height:4.6rem;
     border-radius: 10px;
     -webkit-transition: all .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
