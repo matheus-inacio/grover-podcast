@@ -13229,6 +13229,21 @@ a.has-text-danger-dark:hover,a.has-text-danger-dark:focus{
     -webkit-transition: all .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition: all .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+@media screen and (min-width: 1024px){
+    .navbar-wrapper>.container{
+        max-width:1028px
+    }
+}
+@media screen and (max-width: 1215px){
+    .navbar-wrapper>.container.is-widescreen:not(.is-max-desktop){
+        max-width:1152px
+    }
+}
+@media screen and (min-width: 1216px){
+    .navbar-wrapper>.container:not(.is-max-desktop){
+        max-width:1220px
+    }
+}
 .navbar-wrapper .navbar-brand{
     -webkit-box-align:center;
     -ms-flex-align:center;
