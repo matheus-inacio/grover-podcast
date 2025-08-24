@@ -277,6 +277,7 @@ code,pre{
     font-family:monospace
 }
 body{
+    background: #fefefe;
     color:#4a4a4a;
     font-size:1em;
     font-weight:400;
@@ -4589,7 +4590,24 @@ a.dropdown-item.is-active,button.dropdown-item.is-active{
 .navbar.is-white .navbar-burger{
     color:#0a0a0a
 }
+.navbar .navbar-end {
+    position: absolute;
+    top: 78px;
+    right: 20px;
+    background: #ffffffed;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: left;
+}
 @media screen and (min-width: 1024px){
+    .navbar .navbar-end {
+        position: static;
+        background: transparent;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+    }
     .navbar.is-white .navbar-start>.navbar-item,.navbar.is-white .navbar-start .navbar-link,.navbar.is-white .navbar-end>.navbar-item,.navbar.is-white .navbar-end .navbar-link{
         color:#0a0a0a
     }
@@ -48289,7 +48307,7 @@ figure.team-slanted:hover .member-position{
     }
     .navbar .navbar-menu .navbar-link,.navbar .navbar-menu .navbar-item,.navbar .navbar-menu .navbar-dropdown{
         width:100%;
-        text-align:center
+        text-align:left
     }
     .navbar .navbar-menu .navbar-link:after{
         display:block !important;
